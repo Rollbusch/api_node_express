@@ -1,4 +1,4 @@
-const app = require("./config/express.js")();
+const app = require("./app.js")();
 
 const port = app.get("port");
 
