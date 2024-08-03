@@ -8,9 +8,9 @@ module.exports = () => {
 
   app.set("port", process.env.port || config.get("server.port"));
 
-  app.use(bodyParser);
-
   consign({cwd: 'src'})
+    .then("data")
+    .then("controllers")
     .then("routes")
     .into(app)
 
